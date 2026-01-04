@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-dotenv
+psycopg2-binary
+asyncpg
+snowflake-connector-python
+openai
+pydantic
+requests
+msal
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+cors
