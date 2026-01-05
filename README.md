@@ -51,16 +51,20 @@ An AI-powered connector that links Snowflake or PostgreSQL to Power BI for seaml
    npm run dev
    ```
 
-## Deployment on Vercel
+## Deployment on Render
 
-This project is configured for a seamless monorepo deployment on Vercel.
+This project is optimized for Render using a Blueprint (`render.yaml`).
 
 1.  **Connect to GitHub**: Push your code to a GitHub repository.
-2.  **Import to Vercel**: Create a new project in Vercel and select the repository.
-3.  **Framework Preset**: Select **Other** (Vercel will detect `vercel.json`).
-4.  **Environment Variables**: Add the following in Vercel Project Settings:
-    *   `OPENAI_API_KEY`
-    *   `PBI_CLIENT_ID`
-    *   `PBI_CLIENT_SECRET`
-    *   `PBI_TENANT_ID`
-5.  **Deploy**: Vercel will build the React frontend and deploy the FastAPI backend as Serverless Functions.
+2.  **Blueprint Deploy**: 
+    *   Go to **Dashboard** > **New** > **Blueprint**.
+    *   Connect your repository.
+    *   Render will automatically detect `render.yaml` and set up the Web Service (Backend) and Static Site (Frontend).
+3.  **Environment Variables**: 
+    *   In the Render Dashboard, go to your **databridge-api** service.
+    *   Under **Environment**, add:
+        *   `OPENAI_API_KEY`
+        *   `PBI_CLIENT_ID`
+        *   `PBI_CLIENT_SECRET`
+        *   `PBI_TENANT_ID`
+4.  **Note**: Ensure the `VITE_API_URL` in the frontend matches your actual backend Render URL.
