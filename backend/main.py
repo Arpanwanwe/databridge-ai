@@ -5,9 +5,9 @@ from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
 from dotenv import load_dotenv
 
-from services.database import DatabaseService
-from services.ai_service import AIService
-from services.pbi_service import PBIService
+from backend.services.database import DatabaseService
+from backend.services.ai_service import AIService
+from backend.services.pbi_service import PBIService
 
 load_dotenv()
 
