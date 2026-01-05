@@ -37,10 +37,10 @@ class AIService:
             response = self.client.chat.completions.create(
                 model="gpt-4o",
                 messages=[
-                    {{"role": "system", "content": "You are a data architect and business intelligence expert."}},
-                    {{"role": "user", "content": prompt}}
+                    {"role": "system", "content": "You are a data architect and business intelligence expert."},
+                    {"role": "user", "content": prompt}
                 ],
-                response_format={{ "type": "json_object" }}
+                response_format={ "type": "json_object" }
             )
             return json.loads(response.choices[0].message.content)
         except Exception as e:
@@ -64,8 +64,8 @@ class AIService:
             response = self.client.chat.completions.create(
                 model="gpt-4o",
                 messages=[
-                    {{"role": "system", "content": "You are a SQL expert."}},
-                    {{"role": "user", "content": prompt}}
+                    {"role": "system", "content": "You are a SQL expert."},
+                    {"role": "user", "content": prompt}
                 ]
             )
             return response.choices[0].message.content.strip()
